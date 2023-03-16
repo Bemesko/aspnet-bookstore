@@ -59,3 +59,40 @@ app.Run();
 4. The controller returns the presentation to the user
 
 ### Routing
+- For MVC, URLs will most likely follow the structure:
+
+```
+https://localhost:55555/{controller}/{action}/{id}
+```
+
+---
+
+- Controller class names should always end with `Controller` for the framework to recognize it as an actual controller class.
+- In the `Views` folder, each controller has its own subfolder related to the views associated with it.
+- The controller class has some methods like these:
+```csharp
+    public IActionResult Index()
+    {
+        return View();
+    }
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+```
+The `View()` being return is different in each method. The view for `Index` for example is the HTML file in the path `Views/Home/Index.cshtml`
+
+- There is also a `Views/Shared` folder which has partial views
+  - The `_Layout.cshtml` is even more special because it is the default master page of the application. Can be thought as the `index.html` for the application
+    - This file is the master page because it is referenced in the `_ViewStart.cshtml` file
+- `_ViewImports.cshtml` is where global `using` directives will be placed
+
+### Tag Helpers
+- ASP.NET's way of dinamically generating HTML.
+- Looks like this:
+
+```html
+<label class="form control" asp-for="FirstName"></label>
+```
+
+- They are very focused on keeping their syntax inside regular HTML, and things are defined using tags for each element (hence the TAG in Tag Helpers)
