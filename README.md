@@ -1,5 +1,7 @@
 # Book Store Sample Project
 
+![](docs/welcome-screen.png)
+
 - During my DevOps endeavors I found the necessity to deepen my understanding of the development of fullstack applications, so I'll start studying some .NET stuff, since most applications I have to manage in my day job are made using it.
 - To help me quickstart some projects I'm following [this 3 hour tutorial from FreeCodeCamp](https://www.youtube.com/watch?v=hZ1DASYd9rk&ab_channel=freeCodeCamp.org), but this is only the first one.
 - This is more of a learning-centring project, so I won't document stuff as heavily, but I'll keep writing my notes from the tutorial below:
@@ -96,3 +98,17 @@ The `View()` being return is different in each method. The view for `Index` for 
 ```
 
 - They are very focused on keeping their syntax inside regular HTML, and things are defined using tags for each element (hence the TAG in Tag Helpers)
+
+### Action Results
+- Action Results are an abstraction that allow to group results to certain actions in an application under the same type
+- Example: If a function can return a `View` but under some conditions can also redirect to another page (returning a `Redirect`), both `View` and `Redirect` can be thought as `IActionResult`s
+- POLYMORPHISM
+
+---
+
+- To develop using **hot reloading**, use `dotnet watch` instead of `dotnet run`
+  - I'm forcing myself to use the .NET CLI instead of Visual Studio because I don't like IDEs that bring too much abstraction when I'm learning
+
+---
+
+- Apparently there is a difference between MVC applications and Razor applications, look into it later
