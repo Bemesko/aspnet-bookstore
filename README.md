@@ -109,6 +109,20 @@ The `View()` being return is different in each method. The view for `Index` for 
 - To develop using **hot reloading**, use `dotnet watch` instead of `dotnet run`
   - I'm forcing myself to use the .NET CLI instead of Visual Studio because I don't like IDEs that bring too much abstraction when I'm learning
 
+### Creating Model Classes
+- Since usually a model class corresponds to a table, we can use annotations to determine the table's behavior in the code as well:
+```csharp
+using System.ComponentModel.DataAnnotations;
+
+    [Key]
+    public int Id { get; set; }
+```
+- This marks the attribute as a primary key
+- Other annotations
+  - `[Required]`
+
 ---
 
 - Apparently there is a difference between MVC applications and Razor applications, look into it later
+
+Resume tutorial at 1:10:19 which is when he boots up SQL Server Management Studio
