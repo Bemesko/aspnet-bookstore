@@ -40,4 +40,22 @@ app.MapControllerRoute(
 app.Run();
 ```
 
+### MVC Briefing
+
+- **Model:** Represents the data the application will work with.
+  - Heuristic: Each table in a database can be its own class, which will be a model class. The attributes for that class will be the table's columns
+- **View:** The thing a user sees, used to represent the data in the final application
+  - The view layer can be thought as the HTML for the application but it's not only limited to that
+  - Cannot interact directly with the model
+- **Controller:** Is called by the view to interact with the model, since they can't communicate directly
+  - Process business logic
+  - Handle requests
+  - Most of the actual application code
+
+**A typical scenario**
+1. User clicks on a button, request is received by the controller
+2. Controller fetches the model to know what the data is
+3. Using the data it fetched, the controller calls the view to see how the data will be presented
+4. The controller returns the presentation to the user
+
 ### Routing
