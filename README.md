@@ -131,14 +131,17 @@ using System.ComponentModel.DataAnnotations;
 - The creation of the database objects will be handled by the Microsoft.EntityFrameworkCore packages, in this case the `ApplicationDbContext` class in the `Data` folder, which inherits from `DbContext`
   - This is the **code first** entity framework model, because I'm declaring everything in the .NET code and not creating anything in the database manually. There is also the **database first** model.
 
-Using the database connection string in the application:
+- Using the database connection string in the application:
 ```csharp
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
 ));
 ```
 - The `GetConnectionString` method searches in the `appsettings.json` folder for the key `DefaultConnection` in the `ConnectionStrings` object (this detail isn't obvious, but that's what's happenning)
-- To run themigrations I had to install the entity framework CLI tools, which is not obvious how to do if you're not using visual studio.
+- Also this sets up dependency injection for the ApplicationDbContext class, so it can be used in the controllers now
+
+
+- To run the migrations I had to install the entity framework CLI tools, which is not obvious how to do if you're not using visual studio.
   - The command that worked for me was `dotnet tools install --global dotnet-ef`, which I took from here: https://stackoverflow.com/questions/7903711/using-nuget-package-manager-console-outside-visual-studio-to-run-entity-framewor
   - Also to add migrations the command is slightly different: `dotnet ef migrations add <migration_name>`
   - To run the migrations use `dotnet ef database update`
