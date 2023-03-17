@@ -17,4 +17,9 @@ public class CategoryController : Controller
         IEnumerable<Category> objectCategoryList = _database.Categories.OrderBy(category => category.DisplayOrder);
         return View(objectCategoryList);
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
 }
