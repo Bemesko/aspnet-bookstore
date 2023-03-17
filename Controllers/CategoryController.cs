@@ -1,4 +1,5 @@
 using BookStore.Data;
+using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Controllers;
@@ -13,7 +14,7 @@ public class CategoryController : Controller
     }
     public IActionResult Index()
     {
-        var objectCategoryList = _database.Categories.ToList();
-        return View();
+        IEnumerable<Category> objectCategoryList = _database.Categories.OrderBy(category => category.DisplayOrder);
+        return View(objectCategoryList);
     }
 }

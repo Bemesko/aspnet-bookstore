@@ -147,3 +147,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
   - To run the migrations use `dotnet ef database update`
     - This connects to the database using the connection string specified in the `appsettings.json` (not sure how authentication is working right now, though)
 - Followed [this tutorial](https://www.dirceuresende.com/blog/sql-server-management-studio-ssms-como-ativar-o-tema-dark-dark-theme-support/) to enable dark mode in Sql Server Management Studio because of course I did
+- Managed to access the database in my application:
+
+![](docs/category-page.jpg)
+
+- Apparently I'm using Razor pages to dinamically generate HTML based on C# stuff, see `Views/Category/Index.cshtml`
