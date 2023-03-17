@@ -121,8 +121,12 @@ using System.ComponentModel.DataAnnotations;
 - Other annotations
   - `[Required]`
 
----
-
 - Apparently there is a difference between MVC applications and Razor applications, look into it later
 
-Resume tutorial at 1:10:19 which is when he boots up SQL Server Management Studio
+---
+
+- Add new dependencies to a project using `dotnet add package <package_name>`
+  - Didn't figure out how to search the package name from the command line yet
+- On new classes, type `ctor` for intellisense to create the constructor method for you
+- The creation of the database objects will be handled by the Microsoft.EntityFrameworkCore packages, in this case the `ApplicationDbContext` class in the `Data` folder, which inherits from `DbContext`
+  - This is the **code first** entity framework model, because I'm declaring everything in the .NET code and not creating anything in the database manually. There is also the **database first** model.
