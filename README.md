@@ -152,3 +152,5 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 ![](docs/category-page.jpg)
 
 - Apparently I'm using Razor pages to dinamically generate HTML based on C# stuff, see `Views/Category/Index.cshtml`
+- Bootswatch is a repository of premade Bootstrap themes for applications, which is really handy and I will definitely use it in the future
+- Also there is Bootstrap icons that I didn't know, but it's as easy to use as putting a new stylesheet ref in the HTML and using the correct `<i>` classes
