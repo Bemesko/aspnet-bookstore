@@ -170,3 +170,4 @@ _database.SaveChanges();
 ```html
 <div asp-validation-summary="All"></div>
 ```
+- .NET model annotations are available in the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/pt-br/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) documentation
