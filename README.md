@@ -160,3 +160,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 _database.Categories.Add(obj);
 _database.SaveChanges();
 ```
+
+- validating required fields for creating a model:
+```html
+<span asp-validation-for="DisplayOrder" class="text-danger"></span>
+```
+- The correct information about the error is written by magic (actually it sends the empty object to the server and the text that appears is the response the server gives back)
+- To create a summary of all validation requirements that haven't been met:
+```html
+<div asp-validation-summary="All"></div>
+```

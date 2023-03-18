@@ -27,6 +27,15 @@ public class CategoryController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Create(Category obj)
     {
+        if (obj.Name == obj.DisplayOrder.ToString())
+        {
+            ModelState.AddModelError("DisplayOrder", "The Display Order cannot exactly match the name.");
+        }
+        if (!ModelState.IsValid)
+        {
+            return View(obj);
+        }
+
         _database.Categories.Add(obj);
         _database.SaveChanges();
 
