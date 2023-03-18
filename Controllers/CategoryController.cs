@@ -29,6 +29,8 @@ public class CategoryController : Controller
     {
         _database.Categories.Add(obj);
         _database.SaveChanges();
-        return View();
+
+        // will look for the Index action in the same controller, controller name can be optionally defined
+        return RedirectToAction("Index");
     }
 }
