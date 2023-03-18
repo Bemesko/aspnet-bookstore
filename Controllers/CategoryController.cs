@@ -22,4 +22,13 @@ public class CategoryController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Create(Category obj)
+    {
+        _database.Categories.Add(obj);
+        _database.SaveChanges();
+        return View();
+    }
 }

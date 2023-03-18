@@ -155,4 +155,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 - Bootswatch is a repository of premade Bootstrap themes for applications, which is really handy and I will definitely use it in the future
 - Also there is Bootstrap icons that I didn't know, but it's as easy to use as putting a new stylesheet ref in the HTML and using the correct `<i>` classes
 
-Tutorial checkpoint: 2:06:00
+- snippet: add a new object to the database:
+```csharp
+_database.Categories.Add(obj);
+_database.SaveChanges();
+```
