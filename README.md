@@ -171,3 +171,15 @@ _database.SaveChanges();
 <div asp-validation-summary="All"></div>
 ```
 - .NET model annotations are available in the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/pt-br/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) documentation
+
+- retrieving object information from database:
+```csharp
+// Finds an object based on the primary key
+var fetchedCategory = _database.Categories.Find(id);
+
+// Fetches the first result that matches the criteria
+var fetchedCategory2 = _database.Categories.FirstOrDefault(row => row.id == id);
+
+// Find only one element that matches the criteria, if more than one element matches it throws an error
+var fetchedCategory2 = _database.Categories.SingleOrDefault(row => row.id == id);
+```
