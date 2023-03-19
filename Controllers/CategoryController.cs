@@ -38,6 +38,7 @@ public class CategoryController : Controller
 
         _database.Categories.Add(obj);
         _database.SaveChanges();
+        TempData["success"] = "Category created successfully";
 
         // will look for the Index action in the same controller, controller name can be optionally defined
         return RedirectToAction("Index");
@@ -75,6 +76,7 @@ public class CategoryController : Controller
 
         _database.Categories.Update(obj);
         _database.SaveChanges();
+        TempData["success"] = "Category updated successfully";
 
         return RedirectToAction("Index");
     }
@@ -109,6 +111,7 @@ public class CategoryController : Controller
 
         _database.Categories.Remove(obj);
         _database.SaveChanges();
+        TempData["success"] = "Category deleted successfully";
         return RedirectToAction("Index");
     }
 }
