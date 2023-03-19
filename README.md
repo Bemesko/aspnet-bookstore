@@ -1,10 +1,33 @@
-# Book Store Sample Project
+# Berb's Books
 
-![](docs/welcome-screen.png)
+![](docs/finished-site.png)
 
 - During my DevOps endeavors I found the necessity to deepen my understanding of the development of fullstack applications, so I'll start studying some .NET stuff, since most applications I have to manage in my day job are made using it.
 - To help me quickstart some projects I'm following [this 3 hour tutorial from FreeCodeCamp](https://www.youtube.com/watch?v=hZ1DASYd9rk&ab_channel=freeCodeCamp.org), but this is only the first one.
-- This is more of a learning-centring project, so I won't document stuff as heavily, but I'll keep writing my notes from the tutorial below:
+- This is more of a learning-centring project, so I won't document stuff as heavily, but I'll keep writing my notes in the [Notes section](#tutorial-notes)
+
+---
+
+## Stuff I Used
+- .NET 7
+- ASP.NET MVC for building pages
+- EntityFramework for ORM
+- SQL Server for Database
+- Bootswatch for general site themes
+- Bootstrap icons for, well, icons
+- Toastr for good looking notifications
+
+Also this entire thing was coded using only Visual Studio Code and the .NET CLI, just to prove I don't need Visual Studio
+
+## Features
+
+- Basic CRUD site to interact with a database of categories
+- Notifications after each operation is made successfully
+- Data is persisted in an actual database
+- Picture of cat
+
+![](docs/create-category.png)
+![](docs/category-list.png)
 
 ---
 
