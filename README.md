@@ -183,3 +183,5 @@ var fetchedCategory2 = _database.Categories.FirstOrDefault(row => row.id == id);
 // Find only one element that matches the criteria, if more than one element matches it throws an error
 var fetchedCategory2 = _database.Categories.SingleOrDefault(row => row.id == id);
 ```
+
+- Visual Studio has a template "Create MVC controller with EntityFramework" that literally generates everything I have been doing since the beginning of the tutorial
